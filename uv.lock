@@ -1,0 +1,19 @@
+version = 1
+revision = 3
+requires-python = ">=3.14"
+
+[manifest]
+members = [
+    "design-patterns",
+    "specification",
+]
+
+[[package]]
+name = "design-patterns"
+version = "0.1.0"
+source = { virtual = "." }
+
+[[package]]
+name = "specification"
+version = "0.1.0"
+source = { virtual = "patterns/specification" }
