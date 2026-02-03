@@ -10,4 +10,5 @@ dependencies = []
 members = [
     "patterns/specification",
     "patterns/retry",
+    "patterns/strategy",
 ]
