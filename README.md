@@ -3,3 +3,4 @@ ArjanCodes YouTube [series](https://www.youtube.com/watch?v=KqfMiuL3cx4&list=PLC
 - [Specification Pattern](patterns/specification)
 - [Retry Pattern](patterns/retry)
 - [Strategy Pattern](patterns/strategy)
+- [Observer Pattern](patterns/observer)

@@ -1,7 +1,7 @@
 [project]
 name = "retry"
 version = "0.1.0"
-description = "Add your description here"
+description = "Retry pattern implementation"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
