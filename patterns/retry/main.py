@@ -25,6 +25,8 @@ def retry_decorator(
     jitter: float = 0.1,  # delay offset factor
     default: Callable[..., Any] | None = None,  # (func types not available yet)
 ):
+    "Call a function until success or max attempts reached."
+
     def decorator[T, **P](func: Callable[P, T]) -> Callable[P, T]:
         @wraps(func)
         def wrapper(*args: P.args, **kwargs: P.kwargs) -> T:
@@ -58,6 +60,7 @@ def retry[T](
     backoff_factor: float = 2,  # exponential delay: factor^(attempt-1)
     jitter: float = 0.1,  # delay offset factor
 ) -> T:
+    "Call functions from the list one by one until success."
     for attempt, func in enumerate(funcs, start=1):
         try:
             return func()
@@ -89,6 +92,7 @@ def fetch_joke() -> str:
 
 @retry_decorator(backoff_factor=1, default=lambda _: "Can't get hobby")
 def get_user_interest(text: str) -> str:
+    "Get a user hobby from a text string using Qwen2.5-coder LLM."
     response = ollama.generate(
         model="qwen2.5-coder:1.5b",
         prompt=f"Extract the user info with a hobby or hobbies from this text: {text}",
@@ -98,7 +102,8 @@ def get_user_interest(text: str) -> str:
     return json.loads(content)["hobby"]
 
 
-def main():
+def main() -> None:
+    "Retry pattern."
     print("Hello from retry!")
 
     print("\n--- icanhazdadjoke ---")
