@@ -13,4 +13,5 @@ members = [
     "patterns/strategy",
     "patterns/observer",
     "patterns/template",
+    "patterns/bridge",
 ]
