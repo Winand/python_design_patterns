@@ -2,6 +2,7 @@
 name = "observer"
 version = "0.1.0"
 description = "Observer pattern implementation"
+url = "https://www.youtube.com/watch?v=oNalXg67XEE"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []

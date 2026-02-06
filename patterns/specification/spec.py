@@ -18,7 +18,7 @@ OP = {"and": __and__, "or": __or__}
 class SpecRule[T]:
     "A composable predicate that supports logical operations &, |, and ~."
 
-    def __init__(self, func: PredicateFunc[T]):
+    def __init__(self, func: PredicateFunc[T]) -> None:
         "Initialize the predicate with a function."
         self.func = func
 

@@ -2,6 +2,7 @@
 name = "specification"
 version = "0.1.0"
 description = "Specification pattern implementation"
+url = "https://www.youtube.com/watch?v=KqfMiuL3cx4"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []

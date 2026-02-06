@@ -2,6 +2,7 @@
 name = "template"
 version = "0.1.0"
 description = "Template pattern implementation"
+url = "https://www.youtube.com/watch?v=t0mCrXHsLbI"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []

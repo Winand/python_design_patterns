@@ -1,0 +1,8 @@
+[project]
+name = "singleton"
+version = "0.1.0"
+description = "Singleton anti-pattern implementation"
+url = "https://www.youtube.com/watch?v=Rm4JP7JfsKY"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []

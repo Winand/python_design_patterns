@@ -6,3 +6,5 @@ ArjanCodes YouTube [series](https://www.youtube.com/watch?v=KqfMiuL3cx4&list=PLC
 - [Observer Pattern](patterns/observer)
 - [Template Pattern](patterns/template)
 - [Bridge Pattern](patterns/bridge)
+- [Singleton Anti-Pattern](patterns/singleton)
+- [Object Pool Pattern](patterns/object_pool)
