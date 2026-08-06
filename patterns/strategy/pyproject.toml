@@ -2,7 +2,7 @@
 name = "strategy"
 version = "0.1.0"
 description = "Strategy pattern implementation"
-url = "https://www.youtube.com/watch?v=WQ8bNdxREHU"
+url = "https://www.youtube.com/watch?v=n2b_Cxh20Fw"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []
