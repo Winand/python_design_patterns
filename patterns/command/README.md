@@ -8,4 +8,9 @@ for undo/redo, transaction systems, task queues, macro recording, etc.
 ## Real life examples
 - Airflow tasks (operators) are command objects executed using `execute()` method
 - GUI button `onClick` method is parametrized with a specific action
-- Video editors apply effects/transformations as command objects, enabling non-destructive editing
+- Video editors apply effects/transformations as command objects, enabling
+non-destructive editing
+
+For comparison, Event Sourcing pattern represents events that have already occurred,
+and can be replayed to restore current state. Command pattern represents an
+intent to perform an action — as a result an event *may* be produced.
