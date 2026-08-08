@@ -7,11 +7,3 @@ class Transaction(Protocol):
     def execute(self) -> None:
         "Execute a transaction."
         ...
-
-    def undo(self) -> None:
-        "Undo an operation."
-        ...
-
-    def redo(self) -> None:
-        "Redo an operation."
-        ...

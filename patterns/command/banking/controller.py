@@ -8,27 +8,26 @@ if TYPE_CHECKING:
 @dataclass
 class BankController:
     "Bank operations controller."
-    undo_stack: list[Transaction] = field(default_factory=list)
-    redo_stack: list[Transaction] = field(default_factory=list)
+    ledger: list[Transaction] = field(default_factory=list)
+    next_item: int = 0
 
-    def execute(self, transaction: Transaction) -> None:
-        "Execute a transaction."
-        transaction.execute()
-        self.redo_stack.clear()
-        self.undo_stack.append(transaction)
+    def register(self, transaction: Transaction) -> None:
+        "Register a transaction in the ledger."
+        del self.ledger[self.next_item:]  # drop available redo actions
+        self.ledger.append(transaction)
+        self.next_item += 1
 
     def undo(self) -> None:
-        "Undo an operation from an undo stack."
-        if not self.undo_stack:
-            return
-        transaction = self.undo_stack.pop()
-        transaction.undo()
-        self.redo_stack.append(transaction)
+        "Undo an operation in the ledger."
+        if self.next_item > 0:
+            self.next_item -= 1
 
     def redo(self) -> None:
-        "Redo an operation from a redo stack."
-        if not self.redo_stack:
-            return
-        transaction = self.redo_stack.pop()
-        transaction.redo()
-        self.undo_stack.append(transaction)
+        "Redo an operation in the ledger."
+        if self.next_item < len(self.ledger):
+            self.next_item += 1
+
+    def compute_balances(self) -> None:
+        "Materialize current balances by replaying the ledger history."
+        for transaction in self.ledger[:self.next_item]:
+            transaction.execute()
