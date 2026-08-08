@@ -1,5 +1,5 @@
 # Specification Pattern
- A list of rules that can be composed using logical operations and then evaluated.
+A list of rules that can be composed using logical operations and then evaluated.
 
 ## See also
 - [sutoppu](https://github.com/u8slvn/sutoppu)

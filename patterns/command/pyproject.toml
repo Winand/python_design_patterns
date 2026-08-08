@@ -1,0 +1,8 @@
+[project]
+name = "command"
+version = "0.1.0"
+description = "Command pattern implementation"
+url = "https://www.youtube.com/watch?v=FM71_a3txTo"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []

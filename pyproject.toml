@@ -17,4 +17,5 @@ members = [
     "patterns/object_pool",
     "patterns/singleton",
     "patterns/factory",
+    "patterns/command",
 ]
